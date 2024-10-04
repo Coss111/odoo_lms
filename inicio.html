@@ -46,10 +46,11 @@
         </a>
     </div>
     <div class="md:w-1/2 flex justify-center mt-10 md:mt-0 relative">
-        <div class="w-96 h-96 md:w-[500px] md:h-[500px] rounded-full overflow-hidden  shadow-lg transform transition duration-500 hover:scale-105 absolute right-[-10px] bottom-[-300px] z-10">
-            <img src="gifs/gif2.gif" alt="Gif Inteligencia Artificial" class="w-full h-full object-cover">
+        <div id="image-container" class="w-96 h-96 md:w-[500px] md:h-[500px] rounded-full overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 absolute right-[-10px] bottom-[-300px] z-10">
+            <img id="responsive-image" src="gifs/gif2.gif" alt="Gif Inteligencia Artificial" class="w-full h-full object-cover">
         </div>
     </div>
+    
 </section>
 
 
@@ -470,11 +471,15 @@
         margin: 0 10px; /* Espaciado entre tarjetas */
         flex-shrink: 0; /* Evita que las tarjetas se encojan */
     }
+    .hidden-image {
+        display: none;
+    }
+    
 </style>
 
 
 <script>
-    const carouselTrack = document.querySelector('.carousel-track');
+/*    const carouselTrack = document.querySelector('.carousel-track');
     const carouselItems = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
     const itemWidth = 100; // Porcentaje del ancho del carrusel
@@ -502,4 +507,25 @@
 
     // Iniciar el carrusel automáticamente
     startAutoSlide();
+*/
+function checkImageSize() {
+    const imageContainer = document.getElementById('image-container');
+    const responsiveImage = document.getElementById('responsive-image');
+
+    const originalWidth = 500;  // Tamaño original de la imagen en píxeles
+    const currentWidth = imageContainer.offsetWidth;
+
+    if (currentWidth <= originalWidth * 0.7) {
+        responsiveImage.classList.add('hidden-image');
+    } else {
+        responsiveImage.classList.remove('hidden-image');
+    }
+}
+
+// Escucha de evento para redimensionar la pantalla
+window.addEventListener('resize', checkImageSize);
+
+// Comprobación inicial cuando se carga la página
+checkImageSize();
+
 </script>
