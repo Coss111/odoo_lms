@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aiGENOTech Noticias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-fondo poppins-regular flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-turquesa text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 animate-fadeInLeft">
+                aiGENOTech
+            </div>
+            <nav class="space-x-4 md:space-x-8 texto-claro">
+                <a href="inicio.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Inicio</a>
+                <a href="noticias.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Noticias</a>
+                <a href="servicios.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Servicios</a>
+                <a href="lms.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">LMS</a>
+                <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Odoo</a>
+            </nav>
+        </div>
+        <div class="h-1 bg-gradient-to-r from-pink-400 to-blue-700 animate-pulse"></div>
+    </header>
+
+    <!-- Noticias Section -->
+    <section class="container mx-auto px-6 py-8 flex flex-col gap-8">
+
+        <!-- Segunda Noticia -->
+<div class="flex flex-wrap md:flex-nowrap gap-8">
+    <!-- Image Placeholder with Link and Hover Effect -->
+    <div class="w-full md:w-1/2">
+        <a href="https://poe.com/BotYamil" target="_blank" rel="noopener noreferrer">
+            <img src="imagenes/botyamil.png" alt="BotYamil" class="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </a>
+    </div>
+
+    <!-- News Content - Right Column -->
+    <article class="w-full md:w-1/2 bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-3xl texto-cafe-oscuro font-bold mb-6">Presentación de BotYamil en la red de IA Poe</h2>
+        <p class="text-gray-800 mb-4">
+            Uno de los cofundadores de aiGENOTech, Yamil Cardenas, ha lanzado su propio bot en la plataforma llamado <strong>BotYamil</strong>. Este bot fue diseñado para ayudar a los usuarios a interactuar en temas de tecnología de manera amigable y accesible. 
+        </p>
+        <p class="text-gray-800 mb-4">
+            Con la presentación "Hola, soy Chat Yamil, un gusto compartir la tecnología y conocerte a través de este medio", BotYamil está disponible en Poe para cualquier persona que desee aprender más sobre IA y otras innovaciones tecnológicas. Este desarrollo es un paso más hacia una red de inteligencia artificial inclusiva.
+        </p>
+        <span class="text-sm texto-cafe-oscuro block mt-4">Publicado por Aigenotech | Fecha: 20/10/2024</span>
+    </article>
+</div>
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-morado text-gray-200 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 aiGENOTech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+</html>
+
+<style>
+    /* Custom Colors */
+    .bg-turquesa {
+        background-color: #2a919d;
+    }
+    .bg-cafe {
+        background-color: #927365;
+    }
+    .bg-amarillo {
+        background-color: #fcce7d;
+    }
+    .bg-morado {
+        background-color: #9c5685;
+    }
+    .bg-fondo {
+        background-color: #f2f2f2;
+    }
+    .texto-cafe {
+        color: #927365;
+    }
+    .texto-cafe-oscuro {
+        color: #49372f;
+    }
+    .texto-claro {
+        color: #f2f2f2;
+    }
+    .texto-morado {
+        color: #9c5685;
+    }
+    .texto-amarillo {
+        color: #fcce7d;
+    }
+</style>

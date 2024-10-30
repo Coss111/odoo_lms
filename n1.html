@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aiGENOTech Noticias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-fondo poppins-regular flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-turquesa text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 animate-fadeInLeft">
+                aiGENOTech
+            </div>
+            <nav class="space-x-4 md:space-x-8 texto-claro">
+                <a href="inicio.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Inicio</a>
+                <a href="noticias.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Noticias</a>
+                <a href="servicios.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Servicios</a>
+                <a href="lms.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">LMS</a>
+                <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Odoo</a>
+            </nav>
+        </div>
+        <div class="h-1 bg-gradient-to-r from-pink-400 to-blue-700 animate-pulse"></div>
+    </header>
+
+    <!-- News Article Section -->
+    <section class="container mx-auto px-6 py-8 flex flex-wrap md:flex-nowrap gap-8">
+        <!-- Image Carousel - Left Column -->
+        <div class="w-full md:w-1/2">
+            <div class="swiper mySwiper rounded-lg shadow-lg ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imagenes/fintech.jpg" alt="Participación de Aigenotech" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide"><img src="imagenes/aigenotech fintech.jpg" alt="Evento Fintech" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide"><img src="imagenes/fintech1.jpg" alt="Panel de expertos" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide"><img src="imagenes/fintech2.jpg" alt="Participación de Aigenotech" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide"><img src="imagenes/fintech3.jpg" alt="Participación de Aigenotech" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide"><img src="imagenes/fintech4.jpg" alt="Participación de Aigenotech" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide"><img src="imagenes/fintech5.jpg" alt="Participación de Aigenotech" class="w-full h-full object-cover rounded-lg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!-- News Content - Right Column -->
+        <article class="w-full md:w-1/2 bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-3xl texto-cafe-oscuro font-bold mb-6">Aigenotech en Fintech Connect Bolivia</h2>
+            <p class="text-gray-800 mb-4">
+                Aigenotech patrocinó y organizó la Fintech Connect Bolivia en la Universidad Católica Boliviana, con la participación de 19 expertos nacionales e internacionales. Durante el evento, se discutieron temas como criptoactivos, ciberseguridad y blockchain, resaltando el potencial de Bolivia en el ámbito de la innovación financiera.
+            </p>
+            <p class="text-gray-800 mb-4">
+                Además de la participación activa de expertos, el evento destacó la importancia de la colaboración entre las entidades financieras y la tecnología para mejorar el acceso y seguridad en servicios financieros a nivel nacional. Aigenotech reafirma su compromiso con el desarrollo de tecnologías de vanguardia para el país.
+            </p>
+            <span class="text-sm texto-cafe-oscuro block mt-4">Publicado por Aigenotech | Fecha: 17/10/2024</span>
+        </article>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-morado text-gray-200 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 aiGENOTech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+</html>
+
+<style>
+    /* Custom Colors */
+    .bg-turquesa {
+        background-color: #2a919d;
+    }
+    .bg-cafe {
+        background-color: #927365;
+    }
+    .bg-amarillo {
+        background-color: #fcce7d;
+    }
+    .bg-morado {
+        background-color: #9c5685;
+    }
+    .bg-fondo {
+        background-color: #f2f2f2;
+    }
+    .texto-cafe {
+        color: #927365;
+    }
+    .texto-cafe-oscuro {
+        color: #49372f;
+    }
+    .texto-claro {
+        color: #f2f2f2;
+    }
+    .texto-morado {
+        color: #9c5685;
+    }
+    .texto-amarillo {
+        color: #fcce7d;
+    }
+    .texto-turquesa {
+        color: #2a919d;
+    }
+    .border-amarillo {
+        border-color: #fcce7d;
+    }
+
+    /* Custom Fonts */
+    .jost-fuente {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+</style>
