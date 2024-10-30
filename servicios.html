@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aiGENOTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="poppins-regular bg-fondo flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-turquesa text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 animate-fadeInLeft">
+                aiGENOTech
+            </div>
+            <nav class="space-x-4 md:space-x-8 texto-claro">
+                <a href="inicio.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Inicio</a>
+                <a href="noticias.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Noticias</a>
+                <a href="lms.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">LMS</a>
+                <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Odoo</a>
+            </nav>
+        </div>
+        <div class="h-1 bg-gradient-to-r from-pink-400 to-blue-700 animate-pulse"></div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="flex-grow flex items-center justify-center text-center">
+          <!-- Section 2: Nuestras Tecnologías -->
+<section id="nuestras-tecnologias" class="py-12 bg-gray-100 animate-fadeIn">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center texto-cafe-oscuro animate-fadeInLeft transition duration-300 ease-in-out">
+            Nuestros Servicios
+        </h2>
+        
+        <!-- Grid Layout for Technologies Section -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1: LMS -->
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
+                <div class="mb-4">
+                    <img src="gifs/lms.gif" alt="LMS" class="w-full h-auto rounded">
+                </div>
+                <h3 class="text-lg font-semibold">LMS</h3>
+                <p class="mt-2">Plataforma de gestión educativa que facilita el aprendizaje en línea mediante la administración de cursos y contenido.</p>
+                <a href="lms.html" class="text-teal-300 mt-4 inline-block hover:text-gray-400 transition duration-300">Más al respecto</a>
+            </div>
+
+            <!-- Service 2: Odoo ERP -->
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
+                <div class="mb-4">
+                    <img src="gifs/erp.gif" alt="Odoo ERP" class="w-full h-auto rounded">
+                </div>
+                <h3 class="text-lg font-semibold">Odoo ERP</h3>
+                <p class="mt-2">Implementación y personalización de Odoo ERP para gestionar procesos de ventas, compras, inventarios y más en un solo lugar.</p>
+                <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="text-teal-300 mt-4 inline-block hover:text-gray-400 transition duration-300">Más al respecto</a>
+            </div>
+
+            <!-- Service 3: Banking App -->
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
+                <div class="mb-4">
+                    <img src="gifs/banking-app.gif" alt="Banking App" class="w-full h-auto rounded">
+                </div>
+                <h3 class="text-lg font-semibold">Banking App</h3>
+                <p class="mt-2">Aplicaciones bancarias móviles seguras y fáciles de usar para realizar transacciones y gestionar cuentas.</p>
+                <a href="bankingApp.html" class="text-teal-300 mt-4 inline-block hover:text-gray-400 transition duration-300">Más al respecto</a>
+            </div>
+
+            <!-- Service 4: Medical App -->
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
+                <div class="mb-4">
+                    <img src="gifs/medical-app.gif" alt="Medical App" class="w-full h-auto rounded">
+                </div>
+                <h3 class="text-lg font-semibold">Medical App</h3>
+                <p class="mt-2">Aplicaciones médicas especializadas en la gestión de historiales clínicos, citas y diagnóstico a distancia.</p>
+                <a href="medicalApp.html" class="text-teal-300 mt-4 inline-block hover:text-gray-400 transition duration-300">Más al respecto</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-cafe text-gray-200 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 aiGENOTech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<style>
+    /* Custom Colors */
+    .bg-turquesa {
+        background-color: #2a919d;
+    }
+    .bg-cafe {
+        background-color: #927365;
+    }
+    .bg-amarillo {
+        background-color: #fcce7d;
+    }
+    .bg-morado {
+        background-color: #9c5685;
+    }
+    .bg-fondo {
+        background-color: #f2f2f2;
+    }
+    .texto-cafe {
+        color: #927365;
+    }
+    .texto-cafe-oscuro {
+        color: #49372f;
+    }
+    .texto-claro {
+        color: #f2f2f2;
+    }
+    .texto-morado {
+        color: #9c5685;
+    }
+    .texto-amarillo {
+        color: #fcce7d;
+    }
+    .texto-turquesa {
+        color: #2a919d;
+    }
+    .border-amarillo {
+        border-color: #fcce7d;
+    }
+
+    .img-responsive {
+        max-width: 500px;
+        max-height: 300px;
+        width: auto;
+        height: auto;
+    }
+
+    /* Custom Fonts */
+    .jost-fuente {
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+    /* Resto de estilos... */
+</style>

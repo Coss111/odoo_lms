@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aiGENOTech</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,27 +14,29 @@
 
     
 </head>
-<body class="poppins-regular bg-fondo">
+<body class="poppins-regular bg-fondo overflow-x-hidden">
 
-    <!-- Header Section -->
-<header class="bg-turquesa text-white shadow-lg">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<!-- Header Section -->
+<header class="bg-turquesa text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <div class="text-2xl font-bold text-gray-800 animate-fadeInLeft">
             aiGENOTech
         </div>
         <nav class="space-x-4 md:space-x-8 texto-claro">
-            <a href="noticias.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Noticias</a>
-            <a href="#" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Servicios</a>
-            <a href="#" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">LMS</a>
-            <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Odoo</a>
+            <a href="noticias.html" class="hover:text-gray-200 transition duration-300 transform hover:scale-110">Noticias</a>
+            <a href="servicios.html" class="hover:text-gray-200 transition duration-300 transform hover:scale-110">Servicios</a>
+            <a href="lms.html" class="hover:text-gray-200 transition duration-300 transform hover:scale-110">LMS</a>
+            <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="hover:text-gray-200 transition duration-300 transform hover:scale-110">Odoo</a>
         </nav>
     </div>
     <div class="h-1 bg-gradient-to-r from-pink-400 to-blue-700 animate-pulse"></div>
 </header>
 
 
-    <!-- Hero Section -->
-<section class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center relative">
+
+
+<!-- Hero Section -->
+<section class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center">
     <div class="md:w-1/2 text-center md:text-left animate-fadeInLeft">
         <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6 texto-cafe-oscuro transition duration-300 ease-in-out transform hover:scale-105">
             Soluciones Tecnológicas<br class="hidden md:block">a la Medida de tu Empresa
@@ -41,23 +44,24 @@
         <p class="text-gray-700 mb-6">
             En Aigentec, nos especializamos en desarrollar tecnologías de última generación adaptadas a las necesidades específicas de tu negocio. Desde la concepción de la idea hasta la implementación final, nuestro equipo de expertos trabaja estrechamente contigo para ofrecer soluciones innovadoras que impulsen tu empresa al siguiente nivel.
         </p>
-        <a href="#nuestras-tecnologias" class="bg-morado text-white py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105">
+        <a href="#nuestras-tecnologias" class="bg-morado text-white py-3 px-4 rounded-lg shadow-lg hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105">
             Empezar
         </a>
     </div>
+    
     <div class="md:w-1/2 flex justify-center mt-10 md:mt-0 relative">
-        <div id="image-container" class="w-96 h-96 md:w-[500px] md:h-[500px] rounded-full overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 absolute right-[-10px] bottom-[-300px] z-10">
+        <div class="w-80 h-80 md:w-[500px] md:h-[500px] rounded-full overflow-hidden shadow-lg transform transition duration-500 hover:scale-105">
             <img id="responsive-image" src="gifs/gif2.gif" alt="Gif Inteligencia Artificial" class="w-full h-full object-cover">
         </div>
     </div>
-    
 </section>
+
 
 
 
     <!-- Section 1: Las Últimas Tecnologías -->
     <section class="py-12 bg-gray-100 animate-fadeIn">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold text-left texto-cafe-oscuro animate-fadeInLeft transition duration-300 ease-in-out">Las Últimas Tecnologías</h2>
             <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service 1: Cloud Computing -->
@@ -125,12 +129,15 @@
 
   <!-- Section 2: Nuestras Tecnologías -->
 <section id="nuestras-tecnologias" class="py-12 bg-gray-100 animate-fadeIn">
-    <div class="container mx-auto px-6">
-        <h2 class="text-2xl font-bold text-center texto-cafe-oscuro animate-fadeInLeft transition duration-300 ease-in-out">Nuestras Tecnologías</h2>
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center texto-cafe-oscuro animate-fadeInLeft transition duration-300 ease-in-out">
+            Nuestras Tecnologías
+        </h2>
         
-        <div class="mt-12 flex justify-center space-x-6">
+        <!-- Grid Layout for Technologies Section -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Service 1: LMS -->
-            <div class="bg-morado p-6 rounded-lg shadow-lg text-white flex-1 transition transform hover:scale-105 hover:shadow-2xl">
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
                 <div class="mb-4">
                     <img src="gifs/lms.gif" alt="LMS" class="w-full h-auto rounded">
                 </div>
@@ -140,7 +147,7 @@
             </div>
 
             <!-- Service 2: Odoo ERP -->
-            <div class="bg-morado p-6 rounded-lg shadow-lg text-white flex-1 transition transform hover:scale-105 hover:shadow-2xl">
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
                 <div class="mb-4">
                     <img src="gifs/erp.gif" alt="Odoo ERP" class="w-full h-auto rounded">
                 </div>
@@ -150,7 +157,7 @@
             </div>
 
             <!-- Service 3: Banking App -->
-            <div class="bg-morado p-6 rounded-lg shadow-lg text-white flex-1 transition transform hover:scale-105 hover:shadow-2xl">
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
                 <div class="mb-4">
                     <img src="gifs/banking-app.gif" alt="Banking App" class="w-full h-auto rounded">
                 </div>
@@ -160,7 +167,7 @@
             </div>
 
             <!-- Service 4: Medical App -->
-            <div class="bg-morado p-6 rounded-lg shadow-lg text-white flex-1 transition transform hover:scale-105 hover:shadow-2xl">
+            <div class="bg-morado p-6 rounded-lg shadow-lg text-white transition transform hover:scale-105 hover:shadow-2xl">
                 <div class="mb-4">
                     <img src="gifs/medical-app.gif" alt="Medical App" class="w-full h-auto rounded">
                 </div>
@@ -180,7 +187,7 @@
 
     <!-- Mision Section -->
     <section class="py-10 bg-turquesa text-white animate-fadeIn">
-        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="transition transform hover:scale-105">
                 <img src="gifs/gif3.gif" alt="Laptop Image" class="rounded-lg shadow-lg">
             </div>
@@ -194,23 +201,24 @@
     </section>
 
     <!-- Vision Section -->
-    <section class="py-10 bg-amarillo animate-fadeIn">
-        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="animate-fadeInLeft">
-                <h2 class="text-2xl font-bold texto-cafe-oscuro transition duration-300 ease-in-out">Visión</h2>
-                <p class="mt-4 text-gray-700">
-                    Nuestra visión es ser líderes en el desarrollo de tecnología avanzada, reconocidos por nuestra capacidad para transformar ideas en soluciones efectivas y accesibles. Aspiramos a construir un futuro donde la tecnología sea un facilitador clave para el crecimiento y la innovación en diversos sectores, siempre con un compromiso firme con la calidad, la integridad y la satisfacción del cliente.
-                </p>
-            </div>
-            <div class="transition transform hover:scale-105">
-                <img src="gifs/gif1.gif" alt="Agency Image" class="rounded-lg img-responsive">
-            </div>
+<section class="py-10 bg-amarillo animate-fadeIn">
+    <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="animate-fadeInLeft">
+            <h2 class="text-2xl font-bold texto-cafe-oscuro transition duration-300 ease-in-out">Visión</h2>
+            <p class="mt-4 text-gray-700">
+                Nuestra visión es ser líderes en el desarrollo de tecnología avanzada, reconocidos por nuestra capacidad para transformar ideas en soluciones efectivas y accesibles. Aspiramos a construir un futuro donde la tecnología sea un facilitador clave para el crecimiento y la innovación en diversos sectores, siempre con un compromiso firme con la calidad, la integridad y la satisfacción del cliente.
+            </p>
         </div>
-    </section>
+        <div class="flex justify-center lg:justify-end">
+            <img src="gifs/gif1.gif" alt="Agency Image" class="rounded-lg w-full max-w-md h-auto transition-transform transform hover:scale-105">
+        </div>
+    </div>
+</section>
+
 
     <!-- Development Team Section -->
     <section class="py-16 bg-gray-100 animate-fadeIn">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold text-center texto-cafe-oscuro animate-fadeInLeft transition duration-300 ease-in-out">Development Team</h2>
             <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Member 1 -->
@@ -250,21 +258,21 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section class="py-16 bg-turquesa text-white animate-fadeIn">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold animate-fadeInLeft transition duration-300 ease-in-out">Contáctanos</h2>
-            <p class="mt-4">No dudes en ponerte en contacto con nosotros para cualquier consulta o comentario.</p>
-            <div class="mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <input type="text" class="bg-white texto-cafe rounded-full py-3 px-6 transition transform hover:scale-105" placeholder="Tu Nombre">
-                <input type="email" class="bg-white texto-cafe rounded-full py-3 px-6 transition transform hover:scale-105" placeholder="Tu Correo Electrónico">
-                <button class="bg-white texto-morado rounded-full py-3 px-6 hover:bg-gray-200 transition duration-300 transform hover:scale-105">Enviar</button>
-            </div>
+<section class="py-16 bg-turquesa text-white animate-fadeIn">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold animate-fadeInLeft transition duration-300 ease-in-out">Contáctanos</h2>
+        <p class="mt-4">No dudes en ponerte en contacto con nosotros para cualquier consulta o comentario.</p>
+        <div class="mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <input type="text" id="name" class="bg-white texto-cafe rounded-full py-3 px-4 transition transform hover:scale-105" placeholder="Tu Nombre">
+            <input type="email" id="email" class="bg-white texto-cafe rounded-full py-3 px-4 transition transform hover:scale-105" placeholder="Tu Correo Electrónico">
+            <button id="send" class="bg-white texto-morado rounded-full py-3 px-4 hover:bg-gray-200 transition duration-300 transform hover:scale-105">Enviar</button>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer Section -->
     <footer class="bg-morado text-gray-200 py-8">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-4 text-center">
             <p>&copy; 2024 aiGENOTech. Todos los derechos reservados.</p>
         </div>
     </footer>
@@ -325,107 +333,12 @@
         font-weight: 100;
         font-style: normal;
     }
-    .poppins-thin {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-    }
-    .poppins-extralight {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: normal;
-    }
-    .poppins-light {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-    }
     .poppins-regular {
         font-family: "Poppins", sans-serif;
         font-weight: 400;
         font-style: normal;
     }
-    .poppins-medium {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-    .poppins-semibold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-    }
-    .poppins-bold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-    .poppins-extrabold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-    }
-    .poppins-black {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-    }
-    .poppins-thin-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        font-style: italic;
-    }
-    .poppins-extralight-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic;
-    }
-    .poppins-light-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: italic;
-    }
-    .poppins-regular-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: italic;
-    }
-    .poppins-medium-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: italic;
-    }
-    .poppins-semibold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: italic;
-    }
-    .poppins-bold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: italic;
-    }
-    .poppins-extrabold-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: italic;
-    }
-    .poppins-black-italic {
-        font-family: "Poppins", sans-serif;
-        font-weight: 900;
-        font-style: italic;
-    }
-    .dm-serif-text-regular {
-        font-family: "DM Serif Text", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-    .dm-serif-text-regular-italic {
-        font-family: "DM Serif Text", serif;
-        font-weight: 400;
-        font-style: italic;
-    }
-
+    
     /* Animations */
     @keyframes fadeIn {
         from {
@@ -459,73 +372,33 @@
     html {
         scroll-behavior: smooth;
     }
-
-    /* Ajustes de estilo */
-    .carousel-track {
-        display: flex;
-        transition: transform 0.7s ease-in-out;
-    }
-
-    .carousel-item {
-        min-width: 300px; /* Ajusta el ancho mínimo de cada tarjeta */
-        margin: 0 10px; /* Espaciado entre tarjetas */
-        flex-shrink: 0; /* Evita que las tarjetas se encojan */
-    }
+    
     .hidden-image {
         display: none;
     }
     
 </style>
 
-
 <script>
-/*    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-    const itemWidth = 100; // Porcentaje del ancho del carrusel
-    let autoSlideInterval;
+    (function() {
+        emailjs.init("miZ3ToPOYQg9K5Vuv"); // Reemplaza con tu User ID
+    })();
 
-    function moveToNextItem() {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        const translateXValue = -currentIndex * itemWidth; // Desplazamiento
-        carouselTrack.style.transform = `translateX(${translateXValue}%)`;
-    }
-
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(moveToNextItem, 30000); // Cambia cada 30 segundos
-    }
-
-    function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
-    }
-
-    // Detener el carrusel cuando el ratón está sobre una tarjeta
-    carouselItems.forEach(item => {
-        item.addEventListener('mouseenter', stopAutoSlide);
-        item.addEventListener('mouseleave', startAutoSlide);
-    });
-
-    // Iniciar el carrusel automáticamente
-    startAutoSlide();
-*/
-function checkImageSize() {
-    const imageContainer = document.getElementById('image-container');
-    const responsiveImage = document.getElementById('responsive-image');
-
-    const originalWidth = 500;  // Tamaño original de la imagen en píxeles
-    const currentWidth = imageContainer.offsetWidth;
-
-    if (currentWidth <= originalWidth * 0.7) {
-        responsiveImage.classList.add('hidden-image');
-    } else {
-        responsiveImage.classList.remove('hidden-image');
-    }
-}
-
-// Escucha de evento para redimensionar la pantalla
-window.addEventListener('resize', checkImageSize);
-
-// Comprobación inicial cuando se carga la página
-checkImageSize();
-
+    document.querySelector('button').addEventListener('click', function () {
+        // Recopila los datos del formulario
+        const templateParams = {
+          from_name: document.querySelector("input[placeholder='Tu Nombre']").value,
+          from_email: document.querySelector("input[placeholder='Tu Correo Electrónico']").value,
+        };
+      
+        // Envía el correo usando EmailJS
+        emailjs.send('correos_prueba_aiGENOTec', 'template_lxubw0x', templateParams)
+          .then(response => {
+            console.log('Mensaje enviado correctamente!', response.status, response.text);
+          })
+          .catch(error => {
+            console.error('Ocurrió un error al enviar el mensaje:', error);
+          });
+      });
+      
 </script>
