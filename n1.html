@@ -12,22 +12,49 @@
 </head>
 <body class="bg-fondo poppins-regular flex flex-col min-h-screen">
 
-    <!-- Header Section -->
-    <header class="bg-turquesa text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800 animate-fadeInLeft">
-                aiGENOTech
-            </div>
-            <nav class="space-x-4 md:space-x-8 texto-claro">
-                <a href="inicio.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Inicio</a>
-                <a href="noticias.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Noticias</a>
-                <a href="servicios.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Servicios</a>
-                <a href="lms.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">LMS</a>
-                <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Odoo</a>
-            </nav>
+   <!-- Header Section -->
+   <header class="bg-turquesa text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Company Logo -->
+        <div class="text-2xl font-bold text-gray-800 animate-fadeInLeft">
+            aiGENOTech
         </div>
-        <div class="h-1 bg-gradient-to-r from-pink-400 to-blue-700 animate-pulse"></div>
-    </header>
+        <!-- Hamburger Menu Icon -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-4 md:space-x-8 texto-claro">
+            <a href="inicio.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Inicio</a>
+            <a href="noticias.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Noticias</a>
+            <a href="servicios.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Servicios</a>
+            <a href="lms.html" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">LMS</a>
+            <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition duration-300 transform hover:scale-110">Odoo</a>
+        </nav>
+    </div>
+    <div class="h-1 bg-gradient-to-r from-pink-400 to-blue-700 animate-pulse"></div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-turquesa text-white p-4 space-y-2">
+    <a href="inicio.html" class="block hover:text-gray-300">Inicio</a>
+    <a href="noticias.html" class="block hover:text-gray-600">Noticias</a>
+    <a href="servicios.html" class="block hover:text-gray-300">Servicios</a>
+    <a href="lms.html" class="block hover:text-gray-300">LMS</a>
+    <a href="https://www.odoo.com/es_ES/slides/all/tag/odoo-tutorials-9" target="_blank" rel="noopener noreferrer" class="block hover:text-gray-300">Odoo</a>
+</div>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
 
     <!-- News Article Section -->
     <section class="container mx-auto px-6 py-8 flex flex-wrap md:flex-nowrap gap-8">
